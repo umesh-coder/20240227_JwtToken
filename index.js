@@ -1,6 +1,7 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const routes = require("./routes");
+const bodyParser = require("body-parser");
 require("dotenv").config();
 require("./config/db");
 const app = express();
@@ -10,6 +11,7 @@ const app = express();
 const Port = process.env.Port || 8080;
 
 //import the routes
+app.use(bodyParser.json());
 app.use("/api/v1", routes);
 
 //server listen port
