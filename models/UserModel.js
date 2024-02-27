@@ -2,6 +2,11 @@ const { string } = require("joi");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+/**
+ * @const UserSchema 
+ * It is Schema of Collecton (users)
+ */
+
 const UserSchema = new Schema({
   fullName: {
     type: String,
@@ -22,5 +27,10 @@ const UserSchema = new Schema({
   },
 });
 
+
+
 const UserModel = mongoose.model("user", UserSchema);
+
+//exporting UserModel
+
 module.exports = UserModel;

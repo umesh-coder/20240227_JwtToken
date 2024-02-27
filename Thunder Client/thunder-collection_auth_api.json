@@ -1,0 +1,76 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "auth_api",
+    "dateExported": "2024-02-27T21:28:25.904Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4f3a4123-4f1d-4396-9824-82ccb44c8a8f",
+            "colId": "1ede95a7-74c2-49e1-a657-d813612e2266",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:8080/auth_api/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-27T19:08:24.735Z",
+            "modified": "2024-02-27T21:26:47.422Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"ummu@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "54415817-13f9-4158-9279-267787b0c9c7",
+            "colId": "1ede95a7-74c2-49e1-a657-d813612e2266",
+            "containerId": "",
+            "name": "Register",
+            "url": "http://localhost:8080/auth_api/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-27T19:08:47.653Z",
+            "modified": "2024-02-27T21:26:30.207Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fullName\": \"ummu1245\",\n  \"email\": \"ummu1245@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "28602341-6ce5-4dd0-a2e8-111ab7f62253",
+            "colId": "1ede95a7-74c2-49e1-a657-d813612e2266",
+            "containerId": "",
+            "name": "get Users Data",
+            "url": "http://localhost:8080/auth_api/users",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-27T21:16:20.451Z",
+            "modified": "2024-02-27T21:26:07.684Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWRlNDkzYzY4Y2YxNjY2ZTFlNjM5ODciLCJmdWxsTmFtZSI6InVtbXUiLCJlbWFpbCI6InVtbXVAZ21haWwuY29tIiwiaWF0IjoxNzA5MDY4OTMzLCJleHAiOjE3MDkwODMzMzN9.HPUwjiXqcWOdgNpTvl--GPVOZzaiWRvX7JR-i9DWwXQ"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -12,7 +12,7 @@ const Port = process.env.Port || 8080;
 
 //import the routes
 app.use(bodyParser.json());
-app.use("/api/v1", routes);
+app.use("/auth_api", routes);
 
 //server listen port
 app.listen(Port, () => {});
