@@ -1,5 +1,5 @@
 const express = require("express");
-const jwt = require("jsonwebtoken");
+
 const routes = require("./routes");
 const bodyParser = require("body-parser");
 require("dotenv").config();

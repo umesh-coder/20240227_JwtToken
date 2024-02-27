@@ -1,7 +1,7 @@
 const express = require("express");
 const { registerUser, loginUser } = require("../userController");
 const {
-  userRegisterValidation,
+  userLoginalidate,
   userRegisterValidate,
 } = require("../utils/userValidation");
 
@@ -13,7 +13,7 @@ const routes = express.Router();
 routes.post("/register", userRegisterValidate, registerUser);
 
 //login Route
-routes.post("/login", loginUser);
+routes.post("/login", userLoginalidate, loginUser);
 
 //exporting Route
 module.exports = routes;
