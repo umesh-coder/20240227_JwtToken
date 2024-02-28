@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken");
 
 module.exports = {
   
-
   /**
    * @method registerUser
    * @param {*} req 
@@ -64,7 +63,7 @@ module.exports = {
       };
 
       const jwtToken = jwt.sign(tokenObject, process.env.SECRET, {
-        expiresIn: "4h",
+        expiresIn: "3h",
       });
 
       return res.status(200).json({ jwtToken, tokenObject });
@@ -82,8 +81,10 @@ module.exports = {
   getUsers: async (req, res) => {
 
     try {
-      const users = await UserModel.find() //hide passs({},{password:0})
+      const users = await UserModel.find() //hide passs({},{password:0})//{_id:req.body._id}
+      // const user = await UserModel.find()
       return res.status(200).json({data:users})
+
 
     } catch (error) {
       return res.status(500).json({message:"Error : - "+error})
@@ -91,4 +92,43 @@ module.exports = {
 
 
   },
+
+  /**
+   * @method getSingleUser
+   * @param {*} req 
+   * @param {*} res 
+   * @param {*} next 
+   * @returns A single User by user token
+   */
+  
+getSingleUser : async (req, res, next) => {
+ 
+  const token = req.headers.authorization;
+
+  if (!token) {
+    return res.status(401).json({ message: "Authorization token is missing" });
+  }
+
+  try {
+    // Verify the token
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+    
+    // Get user data based on the decoded token by email
+    const user = await UserModel.find({email:decodedToken.email});
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+  
+    req.user = user;
+
+    // Proceed to the next middleware or route handler
+    next();
+  } catch (error) {
+    return res.status(401).json({ message: "Invalid token" });
+  }
+}
+ 
+  
 };

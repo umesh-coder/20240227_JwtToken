@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "auth_api",
-    "dateExported": "2024-02-27T21:28:25.904Z",
+    "dateExported": "2024-02-28T06:21:58.852Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-27T19:08:24.735Z",
-            "modified": "2024-02-27T21:26:47.422Z",
+            "modified": "2024-02-28T06:10:20.996Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"ummu@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "raw": "{\n  \"email\": \"test2@gmail.com\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
             "tests": []
@@ -33,12 +33,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-02-27T19:08:47.653Z",
-            "modified": "2024-02-27T21:26:30.207Z",
+            "modified": "2024-02-28T05:10:53.576Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"fullName\": \"ummu1245\",\n  \"email\": \"ummu1245@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "raw": "{\n  \"fullName\": \"test2\",\n  \"email\": \"test2@gmail.com\",\n  \"password\": \"123456\"\n}",
                 "form": []
             },
             "tests": []
@@ -52,7 +52,7 @@
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-02-27T21:16:20.451Z",
-            "modified": "2024-02-27T21:26:07.684Z",
+            "modified": "2024-02-28T05:36:24.485Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -66,7 +66,26 @@
                 },
                 {
                     "name": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWRlNDkzYzY4Y2YxNjY2ZTFlNjM5ODciLCJmdWxsTmFtZSI6InVtbXUiLCJlbWFpbCI6InVtbXVAZ21haWwuY29tIiwiaWF0IjoxNzA5MDY4OTMzLCJleHAiOjE3MDkwODMzMzN9.HPUwjiXqcWOdgNpTvl--GPVOZzaiWRvX7JR-i9DWwXQ"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWRlYmZjNmVlMWI4N2Y3ZDg5MDdmNjIiLCJmdWxsTmFtZSI6InRlc3QxIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJpYXQiOjE3MDkwOTcxODksImV4cCI6MTcwOTEwNzk4OX0.uNH03Z7lzIQpsp1MHkciuQRQzonz7UnteBUFDkwcanM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "49d82f07-8eff-4f6d-b2a3-f4321630f91d",
+            "colId": "1ede95a7-74c2-49e1-a657-d813612e2266",
+            "containerId": "",
+            "name": "get User of particular Token by token",
+            "url": "http://localhost:8080/auth_api/user",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-28T05:59:20.470Z",
+            "modified": "2024-02-28T06:10:34.594Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWRlYzA1ZGVlMWI4N2Y3ZDg5MDdmNjciLCJmdWxsTmFtZSI6InRlc3QyIiwiZW1haWwiOiJ0ZXN0MkBnbWFpbC5jb20iLCJpYXQiOjE3MDkxMDA2MjAsImV4cCI6MTcwOTExMTQyMH0.kncMlu-7FOYAQHs-8PQteOvYsloM_QT5Vtbo_J7eqP0"
                 }
             ],
             "params": [],
